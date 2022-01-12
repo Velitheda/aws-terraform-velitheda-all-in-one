@@ -107,7 +107,7 @@ EOT
   }
 
   vpc_security_group_ids = [
-    aws_security_group.allow_inbound_traffic.id,
+    aws_security_group.allow_inbound_http.id,
     aws_security_group.allow_outbound_traffic.id,
   ]
 }

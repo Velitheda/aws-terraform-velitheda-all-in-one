@@ -7,7 +7,7 @@ resource "aws_vpc" "main" {
   enable_dns_hostnames = true
 
   tags = {
-    Name = "main"
+    Name = "main-jasmine"
   }
 }
 
@@ -17,21 +17,21 @@ resource "aws_subnet" "main" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "main"
+    Name = "main-jasmine"
   }
 }
 
 resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
   tags = {
-    Name = "main"
+    Name = "main-jasmine"
   }
 }
 
 resource "aws_default_route_table" "main" {
   default_route_table_id = aws_vpc.main.default_route_table_id
   tags = {
-    "Name" = "main"
+    "Name" = "main-jasmine"
   }
   route {
     cidr_block = "0.0.0.0/0"

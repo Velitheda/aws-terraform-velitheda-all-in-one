@@ -88,7 +88,7 @@ resource "aws_instance" "web_server_01_jasmine" {
   user_data     = <<EOT
   package_update: true
   packages:
-  - <input-goes-here>
+  - nginx
   write_files:
   - content: |
       <html>

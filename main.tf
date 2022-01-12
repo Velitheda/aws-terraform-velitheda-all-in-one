@@ -100,6 +100,17 @@ resource "aws_instance" "web_server_01_jasmine" {
     permissions: '0644'
 runcmd:
 - cp /usr/share/app/index.html /usr/share/nginx/html/index.html
+write_files:
+- content: |
+    <html>
+      <body>
+        <p> Hello Jasmine </p>
+      </body>
+      </html>
+  path: /usr/share/app/index.html
+  permissions: '0644'
+runcmd:
+- cp /usr/share/app/index.html /usr/share/nginx/html/index.html
 EOT
 
   tags = {
